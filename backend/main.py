@@ -16,27 +16,8 @@ app.mount(
     name="assets"
 )
 
-# 2. Монтируем статику для документов (PDF, DOCX)
-app.mount(
-    "/docs",
-    StaticFiles(directory=os.path.join(STATIC_DIR, "docs")),
-    name="docs"
-)
 
-# Убедимся, что PDF файл доступен
-@app.get("/docs/privacy-policy.pdf")
-async def get_privacy_policy():
-    pdf_path = os.path.join(STATIC_DIR, "docs", "privacy-policy.pdf")
-    if os.path.exists(pdf_path):
-        return FileResponse(
-            pdf_path,
-            media_type="application/pdf",
-            filename="privacy-policy.pdf"
-        )
-    else:
-        return {"error": "PDF файл не найден"}
-
-# 3. Создаем маршрут для главной страницы, который всегда будет отдавать index.html
+# 2. Создаем маршрут для главной страницы, который всегда будет отдавать index.html
 @app.get("/{full_path:path}")
 async def serve_vue_app(full_path: str):
     index_path = os.path.join(STATIC_DIR, "index.html")

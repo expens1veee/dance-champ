@@ -11,34 +11,33 @@
       </ul>
 
       <div class="privacy-link">
-        <a @click="openPolicyPDF">Офёрта и политика конфиденциальности</a>
+        <a @click="downloadPolicyPDF">Офёрта и политика конфиденциальности</a>
       </div>
     </div>
 
-    <!-- модальное окно удалено, теперь открываем PDF файл -->
+    <!-- PDF файл скачивается при клике -->
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import PageHeader from '../components/PageHeader.vue'
 
-const showPolicyModal = ref(false);
-
-function openPolicyPDF() {
+function downloadPolicyPDF() {
   try {
-    // Попробуем несколько вариантов пути
-    const pdfUrl = '/docs/privacy-policy.pdf';
-    const newWindow = window.open(pdfUrl, '_blank');
+    // Создаем ссылку для скачивания файла
+    const link = document.createElement('a');
+    link.href = '/docs/privacy-policy.pdf';
+    link.download = 'Офёрта_и_политика_конфиденциальности_TENЬ.pdf';
+    link.target = '_blank';
     
-    if (!newWindow) {
-      // Если popup заблокирован, попробуем напрямую
-      window.location.href = pdfUrl;
-    }
+    // Добавляем ссылку в документ, кликаем и удаляем
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   } catch (error) {
-    console.error('Ошибка при открытии PDF:', error);
-    // Fallback - прямая ссылка
-    window.location.href = '/docs/privacy-policy.pdf';
+    console.error('Ошибка при скачивании PDF:', error);
+    // Fallback - прямая ссылка на файл
+    window.open('/docs/privacy-policy.pdf', '_blank');
   }
 }
 </script>
