@@ -21,24 +21,10 @@
 
 <script setup>
 import PageHeader from '../components/PageHeader.vue'
+import { downloadPDF } from '../utils/pdfDownload.js'
 
 function downloadPolicyPDF() {
-  try {
-    // Создаем ссылку для скачивания файла
-    const link = document.createElement('a');
-    link.href = '/docs/privacy-policy.pdf';
-    link.download = 'Офёрта_и_политика_конфиденциальности_TENЬ.pdf';
-    link.target = '_blank';
-    
-    // Добавляем ссылку в документ, кликаем и удаляем
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  } catch (error) {
-    console.error('Ошибка при скачивании PDF:', error);
-    // Fallback - прямая ссылка на файл
-    window.open('/docs/privacy-policy.pdf', '_blank');
-  }
+  downloadPDF('privacy-policy.pdf', 'Офёрта_и_политика_конфиденциальности_TENЬ.pdf');
 }
 </script>
 

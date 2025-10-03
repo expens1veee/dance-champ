@@ -5,13 +5,18 @@
       <div class="summary">
         <p>Здесь располагается краткий текст положения о чемпионате. Основные цели, задачи, правила участия и ключевые моменты, которые должен знать каждый участник перед ознакомлением с полной версией документа.</p>
       </div>
-      <a href="./docs/regulations.pdf" target="_blank" class="btn">Полное положение</a>
+      <a @click="downloadRegulationsPDF" class="btn">Полное положение</a>
     </div>
   </div>
 </template>
 
 <script setup>
 import PageHeader from '../components/PageHeader.vue'
+import { downloadPDF } from '../utils/pdfDownload.js'
+
+function downloadRegulationsPDF() {
+  downloadPDF('regulations.pdf', 'Полное_положение_TENЬ.pdf');
+}
 </script>
 
 <style scoped>
