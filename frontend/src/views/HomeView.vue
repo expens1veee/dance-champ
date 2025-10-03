@@ -209,4 +209,92 @@ onBeforeUnmount(() => {
   box-shadow: 0 0 8px rgba(229,57,53,0.45);
   transform: scale(1.15);
 }
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 60%;
+    max-height: 50vh;
+    opacity: 0.3;
+  }
+  
+  .side-rail {
+    left: 12px;
+    gap: 8px;
+  }
+  
+  .progress-indicator__track {
+    width: 3px;
+    height: 120px;
+  }
+  
+  .page-dots span {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .about-screen {
+    padding: 20px 16px;
+  }
+  
+  .content-wrapper {
+    max-width: 100%;
+    padding: 0 8px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  
+  .slogan {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+  
+  .facts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .info-card {
+    padding: 16px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .info-card strong {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 50%;
+    max-height: 40vh;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+  }
+      
+  .slogan {
+    font-size: 1rem;
+  }
+  
+  .info-card {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .side-rail {
+    left: 8px;
+  }
+  
+  .about-screen {
+    padding: 16px 12px;
+  }
+}
 </style>

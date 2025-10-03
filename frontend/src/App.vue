@@ -1,17 +1,33 @@
 <script setup>
 import { RouterLink, RouterView, useRoute } from 'vue-router'
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed, onBeforeUnmount } from 'vue'
 
 const isMenuOpen = ref(false)
+
+const route = useRoute()
+const windowWidth = ref(window.innerWidth)
+
+const isStaticFooter = computed(() => {
+  // На мобильных устройствах статический футер везде
+  const isMobile = windowWidth.value <= 768
+  return isMobile || route.path === '/master-classes' || route.path === '/kgo'
+})
 
 onMounted(() => {
   setTimeout(() => {
     isMenuOpen.value = true
   }, 250)
+  
+  const handleResize = () => {
+    windowWidth.value = window.innerWidth
+  }
+  
+  window.addEventListener('resize', handleResize)
 })
 
-const route = useRoute()
-const isStaticFooter = computed(() => route.path === '/master-classes' || route.path === '/kgo')
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleResize)
+})
 </script>
 
 <template>
@@ -222,6 +238,26 @@ const isStaticFooter = computed(() => route.path === '/master-classes' || route.
 
 .main-footer a:hover::after {
   width: 100%;
+}
+
+/* Мобайл версия: статический футер внизу */
+@media (max-width: 768px) {
+  .layout--static .main-footer {
+    position: static;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    position: relative;
+    margin-top: auto;
+    padding: 20px 16px;
+    justify-content: center;
+  }
+  
+  .layout {
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
 }
 
 /* spacer больше не нужен */
