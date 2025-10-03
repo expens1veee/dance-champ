@@ -233,6 +233,7 @@ onBeforeUnmount(() => {
   .side-rail {
     left: 12px;
     gap: 8px;
+    display: none !important; /* скрываем индикатор на мобильных */
   }
   
   .progress-indicator__track {
