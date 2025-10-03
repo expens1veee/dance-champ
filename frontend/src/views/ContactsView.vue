@@ -26,7 +26,20 @@ import PageHeader from '../components/PageHeader.vue'
 const showPolicyModal = ref(false);
 
 function openPolicyPDF() {
-  window.open('/docs/privacy-policy.pdf', '_blank');
+  try {
+    // Попробуем несколько вариантов пути
+    const pdfUrl = '/docs/privacy-policy.pdf';
+    const newWindow = window.open(pdfUrl, '_blank');
+    
+    if (!newWindow) {
+      // Если popup заблокирован, попробуем напрямую
+      window.location.href = pdfUrl;
+    }
+  } catch (error) {
+    console.error('Ошибка при открытии PDF:', error);
+    // Fallback - прямая ссылка
+    window.location.href = '/docs/privacy-policy.pdf';
+  }
 }
 </script>
 
