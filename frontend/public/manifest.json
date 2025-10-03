@@ -1,0 +1,25 @@
+{
+  "name": "TENЬ - Студенческий танцевальный чемпионат",
+  "short_name": "TENЬ",
+  "description": "Официальный сайт студенческого танцевального чемпионата TENЬ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#e53935",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "ru",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}

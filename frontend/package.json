@@ -1,6 +1,8 @@
 {
-  "name": "dance",
-  "version": "0.0.0",
+  "name": "dance-championship-ten",
+  "displayName": "TENЬ - Студенческий танцевальный чемпионат",
+  "version": "1.0.0",
+  "description": "Официальный сайт студенческого танцевального чемпионата TENЬ",
   "private": true,
   "type": "module",
   "engines": {
