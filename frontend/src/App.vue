@@ -240,23 +240,33 @@ onBeforeUnmount(() => {
   width: 100%;
 }
 
+.layout { min-height: 100vh; }
+.layout--static { display: flex; flex-direction: column; }
+
+.main-footer.is-fixed-centered {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
 /* Мобайл версия: статический футер внизу */
 @media (max-width: 768px) {
-  .layout--static .main-footer {
-    position: static;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    position: relative;
-    margin-top: auto;
-    padding: 20px 16px;
-    justify-content: center;
-  }
-  
-  .layout {
+  .layout--static {
     min-height: 100vh !important;
     display: flex !important;
     flex-direction: column !important;
+  }
+  
+  .layout--static .main-footer {
+    position: static !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-top: auto !important;
+    padding: 20px 16px !important;
+    justify-content: center !important;
   }
 }
 
