@@ -30,4 +30,4 @@ async def serve_vue_app(full_path: str):
 # В реальной работе сервер будет запускаться командой в терминале
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=80)
