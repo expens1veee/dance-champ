@@ -36,7 +36,7 @@ import PageHeader from '../components/PageHeader.vue'
 import markPhoto from '@/assets/teachers/mark_gorodilkin.jpg'
 import ekaterinaPhoto from '@/assets/teachers/ekaterina_beleva.jpg'
 import arrrPhoto from '@/assets/teachers/arrr.jpg'
-import tinaPhoto from '@/assets/teachers/tina_khanova.jpg'
+import tinaPhoto from '@/assets/teachers/tina_khanova.JPG'
 
 const teachers = ref([
   {
