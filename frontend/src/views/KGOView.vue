@@ -18,21 +18,36 @@
 <script setup>
 import { ref } from 'vue'
 import PageHeader from '../components/PageHeader.vue'
+import TaisiyaPhoto from '@/assets/kgo/Taisiya.JPG'
+import VdovinaPhoto from '@/assets/kgo/Vdovina.JPG'
+import ObraztsovaPhoto from '@/assets/kgo/Obraztsova.JPG'
+import FrolovaPhoto from '@/assets/kgo/Frolova.JPG'
+import PanovaPhoto from '@/assets/kgo/Panova.JPG'
+import VishnyakovPhoto from '@/assets/kgo/Vishnyakov.JPG'
+import StruninaPhoto from '@/assets/kgo/Strunina.JPG'
+import AfanasyevPhoto from '@/assets/kgo/Afanasyev.JPG'
+import DanilenkoPhoto from '@/assets/kgo/Danilenko.JPG'
+import RakovaPhoto from '@/assets/kgo/Rakova.JPG'
+import SavinovaPhoto from '@/assets/kgo/Savinova.JPG'
+import Baimurzina from '@/assets/kgo/Baimurzina.JPG'
+import Sogomonyan from '@/assets/kgo/Sogomonyan.JPG'
+
+
 // Информация КГО
 const kgoMembers = ref([
-  { name: 'Шевченко Таисия', role: 'Главный Организатор Чемпионата', photo: '/src/assets/kgo/Taisiya.jpg' },
-  { name: 'Вдовина Александра', role: 'Заместитель ГО', photo: '/src/assets/kgo/Vdovina.jpg' },
-  { name: 'Образцова Александра', role: 'Хореограф Чемпионата', photo: '/src/assets/kgo/Obraztsova.jpg' },
-  { name: 'Фролова Александра', role: 'Ответственная за менторов', photo: '/src/assets/kgo/Frolova.jpg' },
-  { name: 'Панова Юлия', role: 'Ответственная за дизайн', photo: '/src/assets/kgo/Panova.jpg' },
-  { name: 'Вишняков Егор', role: 'Ответственный за спонсорство', photo: '/src/assets/kgo/Vishnyakov.jpg' },
-  { name: 'Струнина Елена', role: 'Ответственная за медиа', photo: '/src/assets/kgo/Strunina.jpg' },
-  { name: 'Афанасьев Артём', role: 'Ответственный за медиа', photo: '/src/assets/kgo/Afanasyev.jpg' },
-  { name: 'Пока неизвестно кто будет', role: 'Ответственный за декор', photo: '/src/assets/kgo/placeholder.jpg' },
-  { name: 'Даниленко Анастасия', role: 'Ответственная за SMM', photo: '/src/assets/kgo/Danilenko.jpg' },
-  { name: 'Ракова Александра', role: 'Ответственная за внешние связи', photo: '/src/assets/kgo/Rakova.jpg' },
-  { name: 'Баймурзина Дарина', role: 'Менеджер финала', photo: '/src/assets/kgo/Baimurzina.jpg' },
-  { name: 'Савинова Алина', role: 'Технический куратор', photo: '/src/assets/kgo/Savinova.jpg' }
+  { name: 'Шевченко Таисия', role: 'Главный Организатор Чемпионата', photo: TaisiyaPhoto },
+  { name: 'Вдовина Александра', role: 'Заместитель ГО', photo: VdovinaPhoto },
+  { name: 'Образцова Александра', role: 'Хореограф Чемпионата', photo: ObraztsovaPhoto },
+  { name: 'Фролова Александра', role: 'Ответственная за менторов', photo: FrolovaPhoto },
+  { name: 'Панова Юлия', role: 'Ответственная за дизайн', photo: PanovaPhoto },
+  { name: 'Вишняков Егор', role: 'Ответственный за спонсорство', photo: VishnyakovPhoto },
+  { name: 'Струнина Елена', role: 'Ответственная за фото', photo: StruninaPhoto },
+  { name: 'Афанасьев Артём', role: 'Ответственный за видео', photo: AfanasyevPhoto },
+  { name: 'Согомонян София', role: 'Ответственная за декор', photo: Sogomonyan },
+  { name: 'Даниленко Анастасия', role: 'Ответственная за SMM', photo: DanilenkoPhoto },
+  { name: 'Ракова Александра', role: 'Ответственная за внешние связи', photo: RakovaPhoto },
+  { name: 'Баймурзина Дарина', role: 'Менеджер финала', photo: Baimurzina },
+  { name: 'Савинова Алина', role: 'Технический куратор', photo: SavinovaPhoto }
 ]);
 </script>
 

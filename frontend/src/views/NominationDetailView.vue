@@ -39,7 +39,7 @@ const route = useRoute()
 // Примеры данных по номинациям (можно заменить на загрузку с бэкенда)
 const nominationData = {
   'solo-dance': {
-    title: 'SOLO DANCE',
+    title: 'SOLO',
     criteria: [
       'Техника исполнения',
       'Музыкальность и ритм',
@@ -55,7 +55,7 @@ const nominationData = {
     notes: 'Участник выходит один, допускается реквизит.'
   },
   'best-dance-team': {
-    title: 'BEST DANCE TEAM',
+    title: 'КОМАНДЫ',
     criteria: [
       'Синхронность команды',
       'Комбинаторика и формации',
@@ -72,7 +72,7 @@ const nominationData = {
     notes: 'Допускаются подгруппы и соло-вставки.'
   },
   'best-dance-mini-team': {
-    title: 'BEST DANCE MINI TEAM',
+    title: 'МИНИ-КОМАНДЫ',
     criteria: [
       'Синхронность команды',
       'Комбинаторика и формации',

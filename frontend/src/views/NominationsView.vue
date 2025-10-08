@@ -25,17 +25,17 @@ import PageHeader from '../components/PageHeader.vue'
 const nominations = ref([
   {
     slug: 'solo-dance',
-    title: 'SOLO DANCE',
+    title: 'SOLO',
     description: 'Подробная информация о номинации соло. Требования, критерии оценки, временные рамки и т.д.'
   },
   {
     slug: 'best-dance-team',
-    title: 'BEST DANCE TEAM',
+    title: 'КОМАНДЫ',
     description: 'Подробная информация о номинации для команд. Требования к количеству участников, стилю, музыке и т.д.'
   },
   {
     slug: 'best-dance-mini-team',
-    title: 'BEST DANCE MINI TEAM',
+    title: 'МИНИ-КОМАНДЫ',
     description: 'Подробная информация о номинации для мини-команд. Критерии оценки, временные рамки и требования.'
   }
 ]);

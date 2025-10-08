@@ -1,6 +1,6 @@
 <template>
   <div class="page-view">
-    <PageHeader title="Мастер-классы" subtitle="Лучшие педагоги и интенсивы" />
+    <PageHeader title="Мастер-классы" subtitle="Лучшие педагоги" />
     <div class="content-wrapper">
       <transition-group name="cards" tag="div" class="teachers-grid">
         <div v-for="teacher in teachers" :key="teacher.name" class="teacher-card">
@@ -36,6 +36,7 @@ import PageHeader from '../components/PageHeader.vue'
 import markPhoto from '@/assets/teachers/mark_gorodilkin.jpg'
 import ekaterinaPhoto from '@/assets/teachers/ekaterina_beleva.jpg'
 import arrrPhoto from '@/assets/teachers/arrr.jpg'
+import tinaPhoto from '@/assets/teachers/tina_khanova.jpg'
 
 const teachers = ref([
   {
@@ -68,7 +69,7 @@ const teachers = ref([
     description: 'Участница творческих и режиссерских проектов, клипов и концертов. Специалист по современной хореографии.'
   },
   {
-    name: 'Арррр',
+    name: 'Ар',
     photo: arrrPhoto,
     achievements: [
       'Участник команды «А+» под руководством Алинучи',
@@ -80,6 +81,20 @@ const teachers = ref([
     ],
     experience: 'Танцевальный стаж: 10 лет • Преподавательский стаж: 3 года',
     description: 'Сейчас развивает собственный уникальный стиль, не привязываясь к конкретным направлениям. Ищет свой танец.'
+  },
+  {
+    name: 'Тина Ханова',
+    photo: tinaPhoto,
+    achievements: [
+      'Состояла в команде Red Haze; участница Country Haze Show и Rema Dance Love Show',
+      'Состояла в команде Hot Collection',
+      'Состою в команде OFFSIDE FAM',
+      'Участник Volga Champ и Лига Танца (полуфинал)',
+      'Создала команду HUNTI; сотрудничество с исполнителями и коммерческие выступления',
+      'Организатор собственного танцевального контеста'
+    ],
+    experience: 'Преподает High Heels и Girly Hip Hop. Более 150 учеников на регулярных группах ежемесячно',
+    description: 'Развивает женственный и драйвовый стиль. Ведёт регулярные группы и проекты с артистами.'
   }
 ])
 </script>
