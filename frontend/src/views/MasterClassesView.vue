@@ -88,7 +88,7 @@ const teachers = ref([
     achievements: [
       'Состояла в команде Red Haze; участница Country Haze Show и Rema Dance Love Show',
       'Состояла в команде Hot Collection',
-      'Состою в команде OFFSIDE FAM',
+      'Состоит в команде OFFSIDE FAM',
       'Участник Volga Champ и Лига Танца (полуфинал)',
       'Создала команду HUNTI; сотрудничество с исполнителями и коммерческие выступления',
       'Организатор собственного танцевального контеста'
