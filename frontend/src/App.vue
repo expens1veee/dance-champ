@@ -10,7 +10,7 @@ const windowWidth = ref(window.innerWidth)
 const isStaticFooter = computed(() => {
   // На мобильных устройствах статический футер везде
   const isMobile = windowWidth.value <= 768
-  return isMobile || route.path === '/master-classes' || route.path === '/kgo'
+  return isMobile || route.path === '/master-classes' || route.path === '/kgo' || route.path === '/regulations'
 })
 
 onMounted(() => {
@@ -131,12 +131,13 @@ onBeforeUnmount(() => {
   border-radius: 12px 0 0 12px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.35);
   max-height: calc(100vh - 96px);
-  overflow-y: auto;
+  overflow-y: visible;
   transform: translateX(104%);
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
   will-change: transform;
 }
+
 
 .main-nav.is-open {
   transform: translateX(0);

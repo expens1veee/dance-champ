@@ -16,8 +16,31 @@ app.mount(
     name="assets"
 )
 
+# 1.1. Монтируем папку docs для PDF файлов
+app.mount(
+    "/docs",
+    StaticFiles(directory=os.path.join(STATIC_DIR, "docs")),
+    name="docs"
+)
 
-# 2. Создаем маршрут для главной страницы, который всегда будет отдавать index.html
+
+# 2. Создаем маршрут для favicon
+@app.get("/favicon.ico")
+async def favicon():
+    favicon_path = os.path.join(STATIC_DIR, "favicon.ico")
+    if os.path.exists(favicon_path):
+        return FileResponse(favicon_path)
+    return {"error": "Favicon not found"}
+
+# 3. Создаем маршрут для manifest.json
+@app.get("/manifest.json")
+async def manifest():
+    manifest_path = os.path.join(STATIC_DIR, "manifest.json")
+    if os.path.exists(manifest_path):
+        return FileResponse(manifest_path)
+    return {"error": "Manifest not found"}
+
+# 4. Создаем маршрут для главной страницы, который всегда будет отдавать index.html
 @app.get("/{full_path:path}")
 async def serve_vue_app(full_path: str):
     index_path = os.path.join(STATIC_DIR, "index.html")

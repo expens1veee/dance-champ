@@ -2,7 +2,7 @@
   <div class="page-view">
     <PageHeader title="Контакты" subtitle="Свяжитесь с командой чемпионата" />
     <div class="content-wrapper">
-      <p class="intro-text">«По всем вопросам обращаться:…»</p>
+      <p class="intro-text">По всем вопросам обращаться:</p>
 
       <ul class="contacts-list">
         <li><span>Главный организатор</span> — Таисия Шевченко: <a href="https://vk.com/taisia_shevchenko" target="_blank">VK</a></li>
@@ -24,7 +24,7 @@ import PageHeader from '../components/PageHeader.vue'
 import { downloadPDF } from '../utils/pdfDownload.js'
 
 function downloadPolicyPDF() {
-  downloadPDF('privacy-policy.pdf', 'Офёрта_и_политика_конфиденциальности_TENЬ.pdf');
+  downloadPDF('politika.pdf', 'Офёрта_и_политика_конфиденциальности_TENЬ.pdf');
 }
 </script>
 

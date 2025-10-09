@@ -21,7 +21,7 @@
     <section class="screen about-screen">
       <div class="content-wrapper">
         <h2 class="title">О чемпионате</h2>
-        <h3 class="slogan">«TENЬ. К свету — через движение»</h3>
+        <h3 class="slogan">TENЬ. К свету — через движение</h3>
 
         <div class="facts-grid">
           <div class="info-card">
@@ -30,7 +30,7 @@
           </div>
 
           <div class="info-card">
-            <p><strong>DANCE STUDENT CHEMP «TENЬ» 25</strong></p>
+            <p><strong>DANCE STUDENT CHEMP «TENЬ»</strong></p>
             <p><strong>Даты:</strong> 24-26 ноября</p>
             <p><strong>Место:</strong> РЭУ им. Г. В. Плеханова, Стремянный пер., 36</p>
             <p><strong>Регистрация:</strong> с 13 октября до 1 ноября</p>
@@ -82,6 +82,26 @@ onBeforeUnmount(() => {
   height: 100vh;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
+  /* Белый скроллбар */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.8) rgba(0, 0, 0, 0.2);
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 1);
 }
 
 .screen {
@@ -164,7 +184,7 @@ onBeforeUnmount(() => {
   left: 24px;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
+  display: none; /* Скрыть красный индикатор */
   flex-direction: column;
   align-items: center;
   gap: 12px;

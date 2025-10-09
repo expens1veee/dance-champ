@@ -2,7 +2,7 @@
   <div class="page-view">
     <PageHeader title="КГО" subtitle="Команда Главного Организатора" />
     <div class="content-wrapper">
-      <p class="intro-text">«Каждый участник команды главного организатора чемпионата фестиваля многогранен и неповторим»</p>
+      <p class="intro-text">Каждый участник команды главного организатора чемпионата фестиваля многогранен и неповторим</p>
 
       <div class="kgo-grid">
         <div v-for="member in kgoMembers" :key="member.name" class="kgo-card">
